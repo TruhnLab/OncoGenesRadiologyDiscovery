@@ -1,0 +1,19 @@
+# Runtime dependencies for recreating Figure 1 and Figure 2 from the shipped
+# intermediate tables (the fast, offline path). Versions are those the figures
+# were produced with; nearby versions should also work.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.5.2
+matplotlib==3.10.9
+lifelines==0.30.0        # Cox PH (clinical-context section of comprehensive_results.py)
+
+# --- Upstream provenance only (NOT needed to recreate the figures) ----------
+# The scripts under genomics/ and radiomics/ that regenerate the mutation-score
+# and radiomic-feature CSVs from raw data require, in addition:
+#   evo2                 # Evo2 genomic language model (GPU) — mutation scoring
+#   pyfaidx              # hg38 reference access
+#   nnunet               # KiTS23 kidney/tumor segmentation (KIRC)
+#   nnunetv2             # MAMA-MIA breast-tumor segmentation (BRCA)
+#   totalsegmentator     # liver/lesion segmentation (LIHC)
+#   SimpleITK, nibabel, pydicom   # medical-image I/O

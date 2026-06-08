@@ -1,0 +1,16 @@
+# --- Only scripts/code are tracked; data and results are not uploaded ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# generated results (figures, tables, master matrices)
+results/
+
+# input data (patient genomics + reference databases) — not redistributed here
+data/genomic/
+data/genomic_lihc/
+data/genomic_brca/
+data/oncokb/
+data/clinvar/
+data/kegg_pathways.json

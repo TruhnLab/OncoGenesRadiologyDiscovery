@@ -1,0 +1,86 @@
+{
+  "_comment": "Mapping from internal column names to human-readable plot labels. 'label' strings use matplotlib mathtext ($...$ for math) and raw strings where backslashes appear. Feature names not in this map fall back to the raw column name.",
+
+  "genetic_features": {
+    "total_mutations":     {"short": "total mutations",     "label": "$N_{\\mathrm{total\\,mutations}}$"},
+    "pathway_mutations":   {"short": "pathway mutations",   "label": "$N_{\\mathrm{pathway\\,mutations}}$"},
+    "mean_ll_all":         {"short": "$\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{all}}$",         "label": "$\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{all}}$"},
+    "mean_ll_pathway":     {"short": "$\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{pathway}}$",     "label": "$\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{pathway}}$"},
+    "max_ll_all":          {"short": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{all}}$",                "label": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{all}}$"},
+    "max_ll_pathway":      {"short": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{pathway}}$",            "label": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{pathway}}$"},
+    "max_ll_nonpathway":   {"short": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{non\\,pathway}}$",      "label": "$\\max|\\Delta\\mathrm{LL}|_{\\mathrm{non\\,pathway}}$"},
+    "std_ll_pathway":      {"short": "$\\sigma_{|\\Delta\\mathrm{LL}|,\\,\\mathrm{pathway}}$",      "label": "$\\sigma_{|\\Delta\\mathrm{LL}|,\\,\\mathrm{pathway}}$"},
+    "top3_mean_nonpw":     {"short": "top-3 $\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{non-pathway}}$",  "label": "top-3 $\\overline{|\\Delta\\mathrm{LL}|}_{\\mathrm{non-pathway}}$"}
+  },
+
+  "clinical_features": {
+    "stage_numeric":   {"short": "stage",         "label": "AJCC stage"},
+    "grade_numeric":   {"short": "grade",         "label": "tumor grade"},
+    "age":             {"short": "age",           "label": "age at diagnosis (y)"},
+    "survival_time":   {"short": "survival",      "label": "overall survival (days)"}
+  },
+
+  "tumor_imaging_features": {
+    "kits_tumor_volume_ml":      {"short": "tumor volume",        "label": "tumor volume (mL)"},
+    "tumor_kidney_ratio":        {"short": "tumor/kidney vol. fraction", "label": "tumor / kidney volume fraction"},
+    "kits_tumor_heterogeneity":  {"short": "heterogeneity",       "label": "tumor heterogeneity"},
+    "kits_tumor_necrotic_frac":  {"short": "necrotic fraction",       "label": "tumor necrotic fraction"},
+
+    "lesion_volume_ml":          {"short": "lesion volume",       "label": "lesion volume (mL)"},
+    "lesion_liver_ratio":        {"short": "lesion/liver",        "label": "lesion / liver volume"},
+    "lesion_heterogeneity":      {"short": "heterogeneity",       "label": "lesion heterogeneity"},
+    "lesion_necrotic_frac":      {"short": "necrotic fraction",       "label": "lesion necrotic fraction"},
+    "liver_volume_ml":           {"short": "liver volume",        "label": "liver volume (mL)"},
+    "liver_hu_mean":             {"short": "liver HU mean",       "label": "liver mean HU"},
+    "liver_hu_std":              {"short": "liver HU std",        "label": "liver HU std."},
+
+    "tumor_volume_ml":           {"short": "tumor volume",        "label": "tumor volume (mL)"},
+    "tumor_breast_ratio":        {"short": "tumor/breast",        "label": "tumor / breast volume"},
+    "tumor_heterogeneity":       {"short": "heterogeneity",       "label": "tumor heterogeneity"},
+    "tumor_intensity_mean":      {"short": "intensity mean",      "label": "tumor intensity (mean)"},
+    "tumor_intensity_std":       {"short": "intensity std",       "label": "tumor intensity (std.)"}
+  },
+
+  "pathways": {
+    "kirc_full":    {"short": "KIRC (all)",     "label": "Renal cell carcinoma (hsa05211)"},
+    "lihc_full":    {"short": "LIHC (all)",     "label": "Hepatocellular carcinoma (hsa05225)"},
+    "brca_full":    {"short": "BRCA (all)",     "label": "Breast cancer (hsa05224)"},
+
+    "hif1":         {"short": "HIF-1",          "label": "HIF-1 signaling"},
+    "vegf":         {"short": "VEGF",           "label": "VEGF signaling"},
+    "ubiquitin":    {"short": "ubiquitin",      "label": "ubiquitin-mediated proteolysis"},
+    "tgf_beta":     {"short": "TGF-β",          "label": "TGF-β signaling"},
+    "calcium":      {"short": "calcium",        "label": "calcium signaling"},
+    "pi3k_akt":     {"short": "PI3K-AKT",       "label": "PI3K-AKT signaling"},
+    "p53":          {"short": "p53",            "label": "p53 signaling"},
+    "wnt":          {"short": "Wnt",            "label": "Wnt signaling"},
+    "mapk":         {"short": "MAPK",           "label": "MAPK signaling"},
+    "estrogen":     {"short": "estrogen",       "label": "estrogen signaling"},
+    "progesterone": {"short": "progesterone",   "label": "progesterone signaling"},
+    "erbb":         {"short": "ErbB",           "label": "ErbB (HER2/EGFR) signaling"},
+    "notch":        {"short": "Notch",          "label": "Notch signaling"},
+    "fanconi":      {"short": "Fanconi",        "label": "Fanconi anemia (BRCA1/2)"}
+  },
+
+  "per_pathway_suffix": {
+    "_n":             {"short": "mutation count",    "label_tmpl": "{pw_short} $N_{{\\mathrm{{mut}}}}$"},
+    "_abs_mean_dll":  {"short": "$\\overline{{|\\Delta\\mathrm{{LL}}|}}$", "label_tmpl": "{pw_short} $\\overline{{|\\Delta\\mathrm{{LL}}|}}$"},
+    "_std_ll":        {"short": "$\\sigma_{{|\\Delta\\mathrm{{LL}}|}}$",    "label_tmpl": "{pw_short} $\\sigma_{{|\\Delta\\mathrm{{LL}}|}}$"}
+  },
+
+  "axes_and_titles": {
+    "heatmap_colorbar":            "Spearman $r$",
+    "heatmap_colorbar_partial":    "Spearman $r_{\\mathrm{res}}$",
+    "residualized_suffix":         "(residualized on $N_{\\mathrm{total\\,mutations}}$)",
+    "partial_stats_r":             "$r_{\\mathrm{res}}$",
+    "partial_stats_p":             "$p_{\\mathrm{res}}$",
+    "survival_cindex":             "concordance index (5-fold CV)",
+    "mutation_coverage":           "mutation coverage (%)"
+  },
+
+  "cohort_names": {
+    "KIRC": "TCGA-KIRC (Kidney)",
+    "LIHC": "TCGA-LIHC (Liver)",
+    "BRCA": "TCGA-BRCA (Breast)"
+  }
+}
