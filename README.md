@@ -62,15 +62,17 @@ downloading the NumPy/SciPy/matplotlib wheels; no compilation).
 
 The demo redraws both main-text figures from the intermediate correlation tables.
 
-**Input data.** The intermediate CSVs live under `results/` and are **derived from
-publicly available data** (TCGA-KIRC/-LIHC/-BRCA via the NCI GDC and TCIA; OncoKB,
-ClinVar, and KEGG). They are not re-distributed in this Git repository. Obtain them
-in either of two ways:
-- **Quick demo:** download the derived intermediate tables from the manuscript's
-  Data Availability archive (**⟨add DOI/URL⟩**) and unpack them into `results/`
-  so the tree matches the paths in `config.py`, or
-- **From scratch:** regenerate them from the public raw data with the full pipeline
-  (see *Instructions for use / Reproduction*, GPU required).
+**Demo dataset (shipped with the repo).** The small derived tables the demo reads
+(~1.2 MB) are committed under `results/final_results/`:
+- `discovery_wide_table.csv` — TMB-residualized per-gene-metric × imaging sweep,
+- `exploration/kegg_groups_summary.csv`, `exploration/kegg_groups_gene_table.csv` — Fig 2b,
+- `exploration/clinvar_novel_table.csv` — Fig 2e.
+
+These are derived from **publicly available** data (TCGA-cRCC/-HCC/-BC via the NCI
+GDC and TCIA; OncoKB, ClinVar, KEGG). No download is needed to run the demo — a
+fresh clone reproduces the figures directly. Regenerating them from the raw data
+(the `--regenerate-tables` path) additionally needs the larger mutation-score /
+radiomic-feature CSVs, which are **not** shipped; see *Instructions for use*.
 
 **Run:**
 

@@ -1,0 +1,29 @@
+cohort,gene,origin,group
+KIRC,SPEN,panel-validated,Wnt / Notch / Hedgehog
+KIRC,STAG2,panel-validated,Cell cycle / apoptosis / p53
+KIRC,ROCK1,non-OncoKB,TGF-β
+KIRC,ROCK1,non-OncoKB,Adhesion / cytoskeleton
+KIRC,ATM,panel-validated,MAPK / Ras / RTK
+KIRC,ATM,panel-validated,DNA damage / repair
+KIRC,ATM,panel-validated,Cell cycle / apoptosis / p53
+KIRC,TNR,non-OncoKB,PI3K-Akt / mTOR
+KIRC,TNR,non-OncoKB,Adhesion / cytoskeleton
+KIRC,LAMA4,non-OncoKB,PI3K-Akt / mTOR
+KIRC,LAMA4,non-OncoKB,Adhesion / cytoskeleton
+KIRC,MTOR,panel-validated,MAPK / Ras / RTK
+KIRC,MTOR,panel-validated,PI3K-Akt / mTOR
+KIRC,MTOR,panel-validated,HIF-1 / VEGF
+KIRC,HUWE1,non-OncoKB,Ubiquitin / proteasome
+KIRC,CPEB4,non-OncoKB,Hormone (estrogen / progest.)
+KIRC,PTEN,panel-validated,MAPK / Ras / RTK
+KIRC,PTEN,panel-validated,PI3K-Akt / mTOR
+KIRC,PTEN,panel-validated,Cell cycle / apoptosis / p53
+KIRC,PTEN,panel-validated,Adhesion / cytoskeleton
+KIRC,RYR1,non-OncoKB,Calcium signaling
+KIRC,PATJ,non-OncoKB,Adhesion / cytoskeleton
+KIRC,CACNA1S,non-OncoKB,Calcium signaling
+KIRC,CACNA1S,non-OncoKB,MAPK / Ras / RTK
+KIRC,VHL,panel-validated,HIF-1 / VEGF
+KIRC,VHL,panel-validated,Ubiquitin / proteasome
+KIRC,TLN2,non-OncoKB,MAPK / Ras / RTK
+KIRC,TLN2,non-OncoKB,Adhesion / cytoskeleton

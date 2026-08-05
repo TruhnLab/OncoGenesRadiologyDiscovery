@@ -1,0 +1,12 @@
+cohort,group,n_total,n_panel_validated,n_non_oncokb,genes
+KIRC,Calcium signaling,2,0,2,"CACNA1S,RYR1"
+KIRC,MAPK / Ras / RTK,5,3,2,"ATM,CACNA1S,MTOR,PTEN,TLN2"
+KIRC,PI3K-Akt / mTOR,4,2,2,"LAMA4,MTOR,PTEN,TNR"
+KIRC,Wnt / Notch / Hedgehog,1,1,0,SPEN
+KIRC,Hormone (estrogen / progest.),1,0,1,CPEB4
+KIRC,HIF-1 / VEGF,2,2,0,"MTOR,VHL"
+KIRC,TGF-β,1,0,1,ROCK1
+KIRC,DNA damage / repair,1,1,0,ATM
+KIRC,Cell cycle / apoptosis / p53,3,3,0,"ATM,PTEN,STAG2"
+KIRC,Ubiquitin / proteasome,2,1,1,"HUWE1,VHL"
+KIRC,Adhesion / cytoskeleton,6,1,5,"LAMA4,PATJ,PTEN,ROCK1,TLN2,TNR"

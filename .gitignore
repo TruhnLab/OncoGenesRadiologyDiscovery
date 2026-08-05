@@ -4,8 +4,19 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
-# generated results (figures, tables, master matrices)
-results/
+# Results are not uploaded EXCEPT the small derived tables that make up the
+# figure demo dataset (~1.2 MB — the fast path of make_figures.py reads these).
+# Everything else under results/ (heavy score/feature files, master matrices,
+# generated figures) stays ignored.
+results/*
+!results/final_results/
+results/final_results/*
+!results/final_results/discovery_wide_table.csv
+!results/final_results/exploration/
+results/final_results/exploration/*
+!results/final_results/exploration/kegg_groups_summary.csv
+!results/final_results/exploration/kegg_groups_gene_table.csv
+!results/final_results/exploration/clinvar_novel_table.csv
 
 # input data (patient genomics + reference databases) — not redistributed here
 data/genomic/
